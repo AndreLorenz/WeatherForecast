@@ -5,9 +5,14 @@
 
 Após clonar o repositório, siga os passos seguintes:
 Instalação de dependências:
-npm install
+```bash
+$ npm install
+```
 Rodar servidor local:
-npm run serve
+```bash
+$ npm run serve
+```
+
 
  
 
