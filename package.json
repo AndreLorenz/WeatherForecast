@@ -46,11 +46,11 @@
     "sass-loader": "^5.0.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
+    "webpack": "^2.2.1",
     "angular": "^1.6.4",
     "angular-chart.js": "^1.1.1",
     "angular-ui-router": "^1.0.0-rc.1",
