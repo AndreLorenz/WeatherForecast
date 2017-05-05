@@ -6,14 +6,12 @@ const autoprefixer = require('autoprefixer');
 
 const config = {
   entry: './src/index.js',
-  watch: true,
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/app/components/'),
       assets: path.resolve(__dirname, 'src/assets/')
     },
   },
-  devtool: 'source-map',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',

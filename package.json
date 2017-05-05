@@ -4,10 +4,11 @@
   "description": "A Simple application to consult weather forecast in your city",
   "main": "index.js",
   "scripts": {
-    "start": "webpack",
+    "start": "http-server",
     "lint": "eslint",
     "build": "webpack",
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server",
+    "postinstall": "webpack -p"
   },
   "repository": {
     "type": "git",
