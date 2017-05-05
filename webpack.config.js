@@ -15,11 +15,10 @@ const config = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html'),
+      template: path.join(__dirname, 'src/index.html'),
     }),
     new webpack.ProvidePlugin({
       jQuery: 'jquery',
@@ -62,7 +61,6 @@ const config = {
             minimize: true,
             removeComments: false,
             collapseWhitespace: false,
-            ignoreCustomFragments: [/\{\{.*?}}/],
             attrs: ['img:src', 'link:href']
           },
         }],
