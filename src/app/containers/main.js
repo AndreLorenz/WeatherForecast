@@ -7,6 +7,7 @@ class MainController {
 
   initializer() {
     this.$scope.$on('getForecastChart', (event, chart) => {
+      this.err = undefined;
       this.forecastChart = chart;
     });
     this.$scope.$on('getWeekendBeach', (event, weekend) => {
@@ -17,6 +18,9 @@ class MainController {
     });
     this.$scope.$on('getAverageWeek', (event, average) => {
       this.average = average;
+    });
+    this.$scope.$on('forecastError', (event, err) => {
+      this.err = err;
     });
   }
 }

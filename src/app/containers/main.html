@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-    <div class="row justify-content-md-center" ng-if="!$ctrl.average">
+    <div class="row justify-content-md-center" ng-if="!$ctrl.average && !$ctrl.err">
         <div class="col-12 text-center">
 
             <blockquote class="blockquote bq-primary">
@@ -11,19 +11,18 @@
         </div>
     </div>
 
-    <div class="row" ng-if="$ctrl.isLoader">
+    <div class="row justify-content-md-center" ng-if="$ctrl.err">
         <div class="col-12 text-center">
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{$ctrl.loadingCount}}" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 60%;">
-                </div>
-            </div>
+            <blockquote class="blockquote bq-danger">
+                <p class="bq-title">Ocorreu um imprevisto</p>
+                <p>Por favor, tente novamente.</p>
+            </blockquote>
 
         </div>
     </div>
 
-    <div class="row" ng-if="$ctrl.average">
+    <div class="row" ng-if="$ctrl.average && !$ctrl.err">
         <div class="col-lg-4 col-md-12">
             <!--Tab MaxMin / Previsão-->
             <div class="btn-group text-center" style="display: block">

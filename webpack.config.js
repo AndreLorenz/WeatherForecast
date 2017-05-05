@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer');
 
 const config = {
   entry: './src/index.js',
+  devtool: 'source-map',
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/app/components/'),

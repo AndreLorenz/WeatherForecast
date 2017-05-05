@@ -7,7 +7,8 @@ class HeaderController {
   }
 
   getForecast() {
-    return this.forecastService.getForecast(this.stateSelected.initials, this.citySelected);
+    const a = undefined;
+    return this.forecastService.getForecast(this.stateSelected.initials, this.citySelected, a);
   }
 
   getStates() {
