@@ -1,0 +1,73 @@
+<div class="container-fluid">
+
+    <div class="row justify-content-md-center" ng-if="!$ctrl.average">
+        <div class="col-12 text-center">
+
+            <blockquote class="blockquote bq-primary">
+                <p class="bq-title">Bem vindo ao Weather Forecast</p>
+                <p>Selecione seu estado e sua cidade para ver a previsão do tempo</p>
+            </blockquote>
+
+        </div>
+    </div>
+
+    <div class="row" ng-if="$ctrl.isLoader">
+        <div class="col-12 text-center">
+
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{$ctrl.loadingCount}}" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 60%;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row" ng-if="$ctrl.average">
+        <div class="col-lg-4 col-md-12">
+            <!--Tab MaxMin / Previsão-->
+            <div class="btn-group text-center" style="display: block">
+                <label class="btn btn-primary btn-sm" ng-class="{'active' : $ctrl.tab}">
+                    <input type="radio" ng-model="$ctrl.tab" ng-value="true"> Máxima e Mínima
+                </label>
+                <label class="btn btn-primary btn-sm" ng-class="{'active' : !$ctrl.tab}">
+                     <input type="radio" ng-model="$ctrl.tab" ng-value="false"> Previsão para semana
+                 </label>
+            </div>
+            <hr>
+            <!--./Tab MaxMin / Previsão-->
+
+            <!--Máxima e Mínima-->
+            <div ng-if="$ctrl.tab">
+                <card-today type-temp="Máxima" day="$ctrl.average.max.fullWeekday" date="$ctrl.average.max.fullDate" temp-min="$ctrl.average.max.temp.min"
+                    temp-max="$ctrl.average.max.temp.max" icon="$ctrl.average.max.icon" description="$ctrl.average.max.description"></card-today>
+                </br>
+                <card-today type-temp="Mínima" day="$ctrl.average.min.fullWeekday" date="$ctrl.average.min.fullDate" temp-min="$ctrl.average.min.temp.min"
+                    temp-max="$ctrl.average.min.temp.max" icon="$ctrl.average.min.icon" description="$ctrl.average.min.description"></card-today>
+            </div>
+            <!--./Máxima e Mínima-->
+
+            <!--Previsão-->
+            <div ng-if="!$ctrl.tab">
+                <div ng-repeat="forecast in $ctrl.forecastWeek">
+                    <card-day day="forecast.weekday" date="forecast.date" temp-min="forecast.tempMin" temp-max="forecast.tempMax" icon="forecast.icon"></card-day>
+                    </br>
+                </div>
+            </div>
+        </div>
+        <!--./Previsão-->
+
+        <!--Recomendações-->
+        <div class="col-lg-4 col-md-12">
+            <recommendation date="$ctrl.weekendBeach.date" message="$ctrl.weekendBeach.message"></recommendation>
+        </div>
+        <!--./Recomendações-->
+
+        <!--Gráfico-->
+        <div class="col-lg-4 col-md-12">
+            <weather-chart labels="$ctrl.forecastChart.dates" data="$ctrl.forecastChart.temperatures"></weather-chart>
+        </div>
+        <!--./Gráfico-->
+    </div>
+
+</div>

@@ -1,0 +1,63 @@
+{
+  "name": "weather-forecast",
+  "version": "1.0.0",
+  "description": "A Simple application to consult weather forecast in your city",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "lint": "eslint",
+    "build": "webpack",
+    "serve": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreLorenz/WeatherForecast"
+  },
+  "keywords": [
+    "ES6",
+    "ECMASscript2015",
+    "ES2015",
+    "ES6 modules",
+    "Webpack",
+    "Webpack 2"
+  ],
+  "author": "André Lorenz",
+  "bugs": {
+    "url": "https://github.com/AndreLorenz/WeatherForecast/issues"
+  },
+  "homepage": "https://github.com/AndreLorenz/WeatherForecast/",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.14.0",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.10.1",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "http-server": "^0.9.0",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "postcss-loader": "^1.3.3",
+    "sass-loader": "^5.0.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-chart.js": "^1.1.1",
+    "angular-ui-router": "^1.0.0-rc.1",
+    "chart.js": "^2.5.0",
+    "jquery": "^3.2.1",
+    "mdbootstrap": "^4.3.1",
+    "node-waves": "^0.7.5",
+    "tether": "^1.4.0"
+  }
+}

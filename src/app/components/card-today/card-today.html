@@ -1,0 +1,23 @@
+<div ng-cloak class="today-card">
+    <h4 class="text-center">{{$ctrl.typeTemp}} dos próximos dias</h4>
+    <div class="card wow fadeIn" data-wow-delay="0.4s">
+        <div class="card-block card-today">
+            <div class="row">
+                <div class="col-8">
+                    <img ng-src="../../../src/assets/weather-icons/{{$ctrl.icon}}.png" width="50px" height="50px" class="float-left">
+                    <h4 class="card-title">{{$ctrl.day}}</h4>
+                    <h6>{{$ctrl.date}}</h6>
+                </div>
+                <div class="col-4">
+                    <p class="text-right text-max">{{ $ctrl.tempMax | number:0 }}º <i class="fa fa-caret-up"></i></p>
+                    <p class="text-right text-min">{{ $ctrl.tempMin | number:0 }}º <i class="fa fa-caret-down"></i></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <h6>{{$ctrl.description}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

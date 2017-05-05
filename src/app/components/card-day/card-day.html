@@ -1,0 +1,29 @@
+<div ng-cloak class="day-card">
+    <div class="card card-day">
+        <div class="row">
+            <div class="col-5">
+
+                <div class="flex-center">
+                    <div class="text-center">
+                        <h6>{{$ctrl.day}}</h6>
+                        <p class="card-day-text">{{$ctrl.date}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="flex-center">
+                    <img ng-src="../../../src/assets/weather-icons/{{$ctrl.icon}}.png" width="30px" height="30px">
+                </div>
+
+            </div>
+            <div class="col-5">
+                <div class="flex-center">
+                    <div class="text-center">
+                        <p class="text-right card-day-text-max">{{ $ctrl.tempMax | number:0 }}º <i class="fa fa-caret-up"></i></p>
+                        <p class="text-right card-day-text-min">{{ $ctrl.tempMin | number:0 }}º <i class="fa fa-caret-down"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

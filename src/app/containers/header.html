@@ -1,0 +1,29 @@
+<!--First row-->
+<div class="row wow fadeIn" data-wow-delay="0.2s">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <h1 class="h1-responsive">Weather <i class="fa fa-cloud" aria-hidden="true"></i> Forecast</h1>
+            <br>
+            <p>Encontre a previsão do tempo para sua cidade</p>
+            <hr>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <label for="sel1">Selecione seu Estado:</label>
+                        <select class="form-control" ng-change="$ctrl.loadCities(state.initials)" ng-options="state.name for state in $ctrl.states"
+                            ng-model="$ctrl.stateSelected">
+                            <option value="">-- Selecione um Estado --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <label for="sel1">Selecione sua Cidade:</label>
+                        <select class="form-control" ng-disabled="!$ctrl.stateSelected" ng-options="city for city in $ctrl.cities" ng-model="$ctrl.citySelected">
+                            <option value="">-- Selecione uma Cidade --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-mdb btn-stc" ng-click="$ctrl.getForecast()" ng-class="{disabled: !$ctrl.stateSelected || !$ctrl.citySelected}">Buscar previsão de tempo <i class="fa fa-search right"></i></a>
+        </div>
+    </div>
+</div>

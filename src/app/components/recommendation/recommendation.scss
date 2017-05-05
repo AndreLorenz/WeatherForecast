@@ -1,0 +1,31 @@
+.float-left {
+    margin-right: 20px;
+}
+
+.card-today {
+    color: #FFF;
+    background: #418dff;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #418dff, #0054d3);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #418dff, #0054d3);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #418dff, #0054d3);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #418dff, #0054d3);
+    /* Standard syntax */
+}
+
+.text-right {
+    line-height: 100%;
+    padding: 0 0 0 0;
+    display: block;
+}
+
+.text-max {
+    font-size: 30px;
+}
+
+.text-min {
+    font-size: 20px;
+}
