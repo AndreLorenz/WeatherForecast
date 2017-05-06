@@ -14,8 +14,9 @@ const config = {
     },
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
+    publicPath: '/public/'
   },
   plugins: [
     new HtmlWebpackPlugin({
