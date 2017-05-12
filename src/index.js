@@ -1,5 +1,6 @@
 import angular from 'angular';
 import 'jquery';
+import 'ngstorage';
 import 'mdbootstrap/css/bootstrap.min.css';
 import 'mdbootstrap/js/bootstrap';
 import 'mdbootstrap/js/mdb';
@@ -36,7 +37,7 @@ import { MainComponent } from './app/containers/main';
 import routesConfig from './app.routes';
 import runConfig from './app.run';
 
-angular.module('weather-forecast', ['ui.router', 'chart.js'])
+angular.module('weather-forecast', ['ui.router', 'chart.js', 'ngStorage'])
   .component('app', App)
   .component('headerComponent', HeaderComponent)
   .component('mainComponent', MainComponent)

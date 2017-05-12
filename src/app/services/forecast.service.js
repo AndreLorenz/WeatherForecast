@@ -3,9 +3,20 @@ import { FORECAST_URL, FORECAST_APPID, FORECAST_UNIT, FORECAST_LANG, FORECAST_CN
 export class ForecastService {
 
   /** @ngInject */
-  constructor($rootScope, $http) {
+  constructor($rootScope, $localStorage, $http) {
     this.$rootScope = $rootScope;
+    this.$localStorage = $localStorage;
     this.$http = $http;
+  }
+
+  setFavorite(state, city) {
+    this.$localStorage.state = state;
+    this.$localStorage.city = city;
+  }
+
+  getFavorite() {
+    if (this.$localStorage.state) return { state: this.$localStorage.state, city: this.$localStorage.city };
+    return undefined;
   }
 
   getForecast(state, city) {
